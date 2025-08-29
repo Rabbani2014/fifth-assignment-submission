@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joruri seba</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.css" rel="stylesheet" type="text/css" />
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md px-4 py-2">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <img src="logo.png" 
+             alt="Logo" class="w-8 h-8 rounded-full">
+        <span class="font-semibold text-green-700">Emergency <br>Service</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-3">
+        <div class="flex items-center bg-green-50 text-black px-3 py-1 rounded-full">
+          <span id="heartCount" class="font-semibold text-lg">0</span>
+          <img src="heart.png" 
+             alt="Heart" class="w-8 h-8 rounded-full">   
+        </div>
+        <div class="flex items-center bg-green-50 text-black px-3 py-1 rounded-full">
+          <span id="coinCount" class="text-lg font-bold">100</span>
+          <img src="coin.png" 
+             alt="Coin" class="w-8 h-8 rounded-full">
+        </div>
+        <div class="bg-green-600 text-white px-4 py-1 rounded-full hover:bg-green-700 transition">
+          <span id="heartCount" class="text-lg font-bold">0</span>
+          <span class="font-semibold text-white-700">Copy</span>
+        </div>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+       
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden mt-3 space-y-2">
+      <div class="flex items-center bg-green-50 text-black px-3 py-1 rounded-full w-max">
+        <!--<span class="mr-1">0</span>-->
+        <span id="heartCount" class="font-semibold text-lg">0</span>
+        <span class="text-red-600">❤️</span>
+      </div>
+
+      <div class="flex items-center bg-green-50 text-black px-3 py-1 rounded-full w-max">
+        <span id="coinCount" class="text-lg font-bold">100</span>
+        <span class="text-yellow-500">⭐</span>
+      </div>
+
+      <button class="bg-green-600 text-white px-4 py-1 rounded-full hover:bg-green-700 transition">
+        2 Copy
+      </button>
+    </div>
+  </nav>
+  
+
+  <script>
+    // Toggle mobile menu
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+
+<div class="bg-gradient-to-r from-green-900 to-green-800 text-white">
+
+  <section class="text-center py-8 px-4">
+    <!-- Logo -->
+    <div class="flex justify-center mb-4">
+      <img src="logo.png" alt="Bangladesh Government Logo" class="w-16 h-16 sm:w-20 sm:h-20">
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-xl sm:text-2xl font-bold">Emergency Service Directory</h1>
+
+    <!-- Subtitle -->
+    <p class="mt-2 text-sm sm:text-base text-gray-200">
+      Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
+    </p>
+  </section>
+</div>
+
+<section class="bg-gray-100 min-h-screen p-4">
+
+  <div class="flex flex-col lg:flex-row gap-4">
+
+    <!-- Left: Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
+      <!-- Card Template -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-red-500"><img src="emergency.png" 
+             alt="Logo" class="w-8 h-8 sm:w-8 sm:h-8"></span>
+           
+              <h2 class="font-semibold text-sm"><br>National Emergency Number</h2><br>
+              <p class="text-xs text-gray-500">National Emergency</p>
+           
+          </div>
+          <button class="text-gray-400 hover:text-red-500">🤍</button>
+        </div>
+        <div class="text-2xl font-bold mb-2">999</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
+        <div class="flex gap-2 space-x-8">
+          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        </div>
+      </div>
+
+      <!-- Repeat above card and change content as needed -->
+      <!-- Example: Police Card -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-blue-500">🚔</span>
+            <div>
+              <h2 class="font-semibold text-sm">Police Helpline Number</h2>
+              <p class="text-xs text-gray-500">Police</p>
+            </div>
+          </div>
+          <button class="text-gray-400 hover:text-red-500">🤍</button>
+        </div>
+        <div class="text-2xl font-bold mb-2">999</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Police</div>
+        <div class="flex gap-2">
+          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('Police Helpline Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        </div>
+      </div>
+      <!-- Card Template -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-red-500">🔒</span>
+            <div>
+              <h2 class="font-semibold text-sm">National Emergency Number</h2>
+              <p class="text-xs text-gray-500">National Emergency</p>
+            </div>
+          </div>
+          <button class="text-gray-400 hover:text-red-500">🤍</button>
+        </div>
+        <div class="text-2xl font-bold mb-2">999</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
+        <div class="flex gap-2">
+          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        </div>
+      </div>
+<!-- Card Template -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-red-500">🔒</span>
+            <div>
+              <h2 class="font-semibold text-sm">National Emergency Number</h2>
+              <p class="text-xs text-gray-500">National Emergency</p>
+            </div>
+          </div>
+          <button class="text-gray-400 hover:text-red-500">🤍</button>
+        </div>
+        <div class="text-2xl font-bold mb-2">999</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
+        <div class="flex gap-2">
+          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        </div>
+      </div>
+<!-- Card Template -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-red-500">🔒</span>
+            <div>
+              <h2 class="font-semibold text-sm">National Emergency Number</h2>
+              <p class="text-xs text-gray-500">National Emergency</p>
+            </div>
+          </div>
+          <button class="text-gray-400 hover:text-red-500">🤍</button>
+        </div>
+        <div class="text-2xl font-bold mb-2">999</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
+        <div class="flex gap-2">
+          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        </div>
+      </div>
+<!-- Card Template -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-red-500">🔒</span>
+            <div>
+              <h2 class="font-semibold text-sm">National Emergency Number</h2>
+              <p class="text-xs text-gray-500">National Emergency</p>
+            </div>
+          </div>
+          <button class="text-gray-400 hover:text-red-500">🤍</button>
+        </div>
+        <div class="text-2xl font-bold mb-2">999</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
+        <div class="flex gap-2">
+          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        </div>
+      </div>
+<!-- Card Template -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-red-500">🔒</span>
+            <div>
+              <h2 class="font-semibold text-sm">National Emergency Number</h2>
+              <p class="text-xs text-gray-500">National Emergency</p>
+            </div>
+          </div>
+          <button class="text-gray-400 hover:text-red-500">🤍</button>
+        </div>
+        <div class="text-2xl font-bold mb-2">999</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
+        <div class="flex gap-2">
+          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        </div>
+      </div>
+<!-- Card Template -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-red-500">🔒</span>
+            <div>
+              <h2 class="font-semibold text-sm">National Emergency Number</h2>
+              <p class="text-xs text-gray-500">National Emergency</p>
+            </div>
+          </div>
+          <button class="text-gray-400 hover:text-red-500">🤍</button>
+        </div>
+        <div class="text-2xl font-bold mb-2">999</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
+        <div class="flex gap-2">
+          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        </div>
+      </div>
+<!-- Card Template -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-red-500">🔒</span>
+            <div>
+              <h2 class="font-semibold text-sm">National Emergency Number</h2>
+              <p class="text-xs text-gray-500">National Emergency</p>
+            </div>
+          </div>
+          <button class="text-gray-400 hover:text-red-500">🤍</button>
+        </div>
+        <div class="text-2xl font-bold mb-2">999</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
+        <div class="flex gap-2">
+          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        </div>
+      </div>
+
+
+      <!-- You can add more cards like the above. To save time, you can clone the card div and change values. -->
+    </div>
+
+    <!-- Right: Call History -->
+     
+    <div class="bg-white rounded-lg shadow p-4 w-full lg:w-80 h-full">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="font-semibold text-lg">📞 Call History</h3>
+        <button onclick="clearHistory()" class="text-sm text-green-500 hover:underline">Clear</button>
+      </div>
+      
+        <!--<ul id="callHistory" class="space-y-2 text-sm text-gray-700 overflow-y-auto flex-1"></ul>-->
+    <ul id="callHistory" class="space-y-2 text-sm max-h-[h-8] overflow-y-auto text-gray-700"> 
+        <!-- Call history entries appear here -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    let heartCount = 0;
+    function copyNumber(number) {
+      navigator.clipboard.writeText(number);
+      alert("Copied: " + number);
+      heartCount += 1;
+    document.getElementById("heartCount").textContent = heartCount;
+    }
+    let coinCount = 100;
+    function makeCall(name, number) {
+      if (coinCount >= 20) {
+      // Deduct 20 coins
+      coinCount -= 20;
+      document.getElementById("coinCount").textContent = coinCount;
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      const history = document.getElementById("callHistory");
+
+      const item = document.createElement("li");
+      item.innerHTML = `
+        <div class="flex justify-between">
+          <div>
+            <strong>${name}</strong><br>
+            <span class="text-xs text-gray-500">${number}</span>
+          </div>
+          <div class="text-xs text-gray-400">${time}</div>
+        </div>
+      `;
+
+      history.prepend(item);
+      } else {
+      alert("Not enough coins to make a call.");
+    }
+    }
+
+    function clearHistory() {
+      document.getElementById("callHistory").innerHTML = "";
+    }
+  </script>
+  </section>
+
+
+
+</body>
+</html>
+
