@@ -35,43 +35,32 @@
           <span class="font-semibold text-white-700">Copy</span>
         </div>
       </div>
-
-      <!-- Mobile Hamburger -->
-      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-       
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">    
       </button>
     </div>
 
     <!-- Mobile Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden mt-3 space-y-2">
       <div class="flex items-center bg-green-50 text-black px-3 py-1 rounded-full w-max">
-        <!--<span class="mr-1">0</span>-->
         <span id="heartCount" class="font-semibold text-lg">0</span>
-        <span class="text-red-600">❤️</span>
+          <img src="heart.png" 
+             alt="Heart" class="w-8 h-8 rounded-full">
       </div>
 
       <div class="flex items-center bg-green-50 text-black px-3 py-1 rounded-full w-max">
         <span id="coinCount" class="text-lg font-bold">100</span>
-        <span class="text-yellow-500">⭐</span>
+          <img src="coin.png" 
+             alt="Coin" class="w-8 h-8 rounded-full">
       </div>
-
-      <button class="bg-green-600 text-white px-4 py-1 rounded-full hover:bg-green-700 transition">
-        2 Copy
-      </button>
+       <div class="bg-green-600 text-white px-4 py-1 rounded-full hover:bg-green-700 transition">
+      <span id="copyCount" class="text-lg font-bold">0</span>
+          <span class="font-semibold text-white-700">Copy</span>
+      </div>
     </div>
   </nav>
   
 
-  <script>
-    // Toggle mobile menu
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  </script>
-
+  
 
 <div class="bg-gradient-to-r from-green-900 to-green-800 text-white">
   <section class="text-center py-8 px-4">
@@ -84,7 +73,6 @@
     </p>
   </section>
 </div>
-
 <section class="bg-gray-100 min-h-screen p-4">
   <div class="flex flex-col lg:flex-row gap-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
@@ -100,7 +88,6 @@
             </div>         
           </div>
           <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
-
         </div>
         <div class="text-2xl font-bold mb-2">999</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
@@ -121,7 +108,6 @@
             </div>         
           </div>
           <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
-
         </div>
         <div class="text-2xl font-bold mb-2">999</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Police</div>
@@ -142,7 +128,6 @@
             </div>         
           </div>
          <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
-
         </div>
         <div class="text-2xl font-bold mb-2">999</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Fire</div>
@@ -163,7 +148,6 @@
             </div>         
           </div>
           <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
-
         </div>
         <div class="text-2xl font-bold mb-2">1994-999999</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Health</div>
@@ -184,7 +168,6 @@
             </div>         
           </div>
           <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
-
         </div>
         <div class="text-2xl font-bold mb-2">109</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Help</div>
@@ -205,7 +188,6 @@
             </div>         
           </div>
          <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
-
         </div>
         <div class="text-2xl font-bold mb-2">106</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Govt.</div>
@@ -226,7 +208,6 @@
             </div>         
           </div>
           <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
-
         </div>
         <div class="text-2xl font-bold mb-2">16216</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Electricity</div>
@@ -247,7 +228,6 @@
             </div>         
           </div>
           <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
-
         </div>
         <div class="text-2xl font-bold mb-2">16445</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">NGO</div>
@@ -256,7 +236,6 @@
           <button onclick="makeCall('Brac Helpline', '16445')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
         </div>
       </div>
-
       <div class="bg-white rounded-lg shadow p-4">
         <div class="flex items-center justify-between mb-2">
           <div class="flex flex-col initial-scale">
@@ -268,7 +247,6 @@
             </div>         
           </div>
           <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
-
         </div>
         <div class="text-2xl font-bold mb-2">163</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Travel</div>
@@ -279,31 +257,24 @@
       </div>
       </div>
 
-    <!-- Right: Call History -->
-     
-    <div class="bg-white rounded-lg shadow p-4 w-full lg:w-80 h-full">
+    <!--Call History -->  
+    <div class="bg-white shadow p-4 w-full lg:w-80 h-full">
       <div class="flex items-center justify-between mb-4">
         <img src="call_history.png" 
              alt="Logo" class="w-8 h-8 rounded-full">
-        <h3 class="font-semibold text-lg"></h3>Call History</h3>
-        <button onclick="clearHistory()" class="text-sm text-green-500 hover:underline">Clear</button>
-      </div>
-      
-        <!--<ul id="callHistory" class="space-y-2 text-sm text-gray-700 overflow-y-auto flex-1"></ul>-->
+        <h3 class="font-semibold "></h3>Call History</h3>
+        <button onclick="clearHistory()" class="bg-green-600 font-bold text-sm hover:bg-green-700">Clear</button>
+      </div>       
     <ul id="callHistory" class="space-y-2 text-sm min-h-screen overflow-y-auto text-gray-700"> 
-        <!-- Call history entries appear here -->
       </ul>
     </div>
   </div>
 
   <!-- JavaScript -->
   <script>
-    let heartCount = 0;
-
+  let heartCount = 0;
   function increaseHeart() {
-    
     heartCount += 1;
-   
     document.getElementById("heartCount").textContent = heartCount;
   }
     let copyCount = 0;
@@ -322,7 +293,6 @@
       const now = new Date();
       const time = now.toLocaleTimeString();
       const history = document.getElementById("callHistory");
-
       const item = document.createElement("li");
       item.innerHTML = `
         <div class="flex justify-between">
@@ -333,21 +303,16 @@
           <div class="text-xs text-gray-400">${time}</div>
         </div>
       `;
-
       history.prepend(item);
       } else {
       alert("Not enough coins to make a call.");
     }
     }
-
     function clearHistory() {
       document.getElementById("callHistory").innerHTML = "";
     }
   </script>
   </section>
-
-
-
 </body>
 </html>
 
