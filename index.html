@@ -99,7 +99,8 @@
               <p class="text-xs text-gray-500">National Emergency</p>
             </div>         
           </div>
-          <button class="text-gray-400 hover:text-red-500">🤍</button>
+          <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
+
         </div>
         <div class="text-2xl font-bold mb-2">999</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
@@ -119,7 +120,8 @@
               <p class="text-xs text-gray-500">Police</p>
             </div>         
           </div>
-          <button class="text-gray-400 hover:text-red-500">🤍</button>
+          <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
+
         </div>
         <div class="text-2xl font-bold mb-2">999</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Police</div>
@@ -139,7 +141,8 @@
               <p class="text-xs text-gray-500">Fire Service</p>
             </div>         
           </div>
-          <button class="text-gray-400 hover:text-red-500">🤍</button>
+         <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
+
         </div>
         <div class="text-2xl font-bold mb-2">999</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Fire</div>
@@ -159,7 +162,8 @@
               <p class="text-xs text-gray-500">Ambulance</p>
             </div>         
           </div>
-          <button class="text-gray-400 hover:text-red-500">🤍</button>
+          <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
+
         </div>
         <div class="text-2xl font-bold mb-2">1994-999999</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Health</div>
@@ -179,7 +183,8 @@
               <p class="text-xs text-gray-500">Women & Child Helpline</p>
             </div>         
           </div>
-          <button class="text-gray-400 hover:text-red-500">🤍</button>
+          <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
+
         </div>
         <div class="text-2xl font-bold mb-2">109</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Help</div>
@@ -199,7 +204,8 @@
               <p class="text-xs text-gray-500">Anti-Corruption</p>
             </div>         
           </div>
-          <button class="text-gray-400 hover:text-red-500">🤍</button>
+         <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
+
         </div>
         <div class="text-2xl font-bold mb-2">106</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Govt.</div>
@@ -219,7 +225,8 @@
               <p class="text-xs text-gray-500">Electricity Outage</p>
             </div>         
           </div>
-          <button class="text-gray-400 hover:text-red-500">🤍</button>
+          <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
+
         </div>
         <div class="text-2xl font-bold mb-2">16216</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Electricity</div>
@@ -239,7 +246,8 @@
               <p class="text-xs text-gray-500">Brac</p>
             </div>         
           </div>
-          <button class="text-gray-400 hover:text-red-500">🤍</button>
+          <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
+
         </div>
         <div class="text-2xl font-bold mb-2">16445</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">NGO</div>
@@ -259,7 +267,8 @@
               <p class="text-xs text-gray-500">Bangladesh Railway</p>
             </div>         
           </div>
-          <button class="text-gray-400 hover:text-red-500">🤍</button>
+          <button onclick="increaseHeart()" class="text-gray-400 hover:text-red-500">🤍</button>
+
         </div>
         <div class="text-2xl font-bold mb-2">163</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Travel</div>
@@ -287,6 +296,14 @@
 
   <!-- JavaScript -->
   <script>
+    let heartCount = 0;
+
+  function increaseHeart() {
+    
+    heartCount += 1;
+   
+    document.getElementById("heartCount").textContent = heartCount;
+  }
     let copyCount = 0;
     function copyNumber(number) {
       navigator.clipboard.writeText(number);
