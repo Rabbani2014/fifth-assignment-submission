@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +31,7 @@
              alt="Coin" class="w-8 h-8 rounded-full">
         </div>
         <div class="bg-green-600 text-white px-4 py-1 rounded-full hover:bg-green-700 transition">
-          <span id="heartCount" class="text-lg font-bold">0</span>
+          <span id="copyCount" class="text-lg font-bold">0</span>
           <span class="font-semibold text-white-700">Copy</span>
         </div>
       </div>
@@ -286,17 +287,17 @@
 
   <!-- JavaScript -->
   <script>
-    let heartCount = 0;
+    let copyCount = 0;
     function copyNumber(number) {
       navigator.clipboard.writeText(number);
       alert("Copied: " + number);
-      heartCount += 1;
-    document.getElementById("heartCount").textContent = heartCount;
+      copyCount += 1;
+    document.getElementById("copyCount").textContent = copyCount;
     }
     let coinCount = 100;
     function makeCall(name, number) {
       if (coinCount >= 20) {
-      // Deduct 20 coins
+      alert("Called: " + number);
       coinCount -= 20;
       document.getElementById("coinCount").textContent = coinCount;
       const now = new Date();
