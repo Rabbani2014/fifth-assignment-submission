@@ -73,17 +73,11 @@
 
 
 <div class="bg-gradient-to-r from-green-900 to-green-800 text-white">
-
   <section class="text-center py-8 px-4">
-    <!-- Logo -->
     <div class="flex justify-center mb-4">
       <img src="logo.png" alt="Bangladesh Government Logo" class="w-16 h-16 sm:w-20 sm:h-20">
     </div>
-
-    <!-- Title -->
     <h1 class="text-xl sm:text-2xl font-bold">Emergency Service Directory</h1>
-
-    <!-- Subtitle -->
     <p class="mt-2 text-sm sm:text-base text-gray-200">
       Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
     </p>
@@ -91,21 +85,18 @@
 </div>
 
 <section class="bg-gray-100 min-h-screen p-4">
-
   <div class="flex flex-col lg:flex-row gap-4">
-
-    <!-- Left: Cards Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
-      <!-- Card Template -->
+      <!-- Card 1 -->
       <div class="bg-white rounded-lg shadow p-4">
         <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
+          <div class="flex flex-col initial-scale">
             <span class="text-red-500"><img src="emergency.png" 
-             alt="Logo" class="w-8 h-8 sm:w-8 sm:h-8"></span>
-           
-              <h2 class="font-semibold text-sm"><br>National Emergency Number</h2><br>
+             alt="Emergency Logo" class="w-8 h-8 sm:w-8 sm:h-8"></span>         
+              <div>
+              <h2 class="font-semibold text-sm">National Emergency Number</h2>
               <p class="text-xs text-gray-500">National Emergency</p>
-           
+            </div>         
           </div>
           <button class="text-gray-400 hover:text-red-500">🤍</button>
         </div>
@@ -116,164 +107,167 @@
           <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
         </div>
       </div>
-
-      <!-- Repeat above card and change content as needed -->
-      <!-- Example: Police Card -->
+      <!--Card 2-->
       <div class="bg-white rounded-lg shadow p-4">
         <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
-            <span class="text-blue-500">🚔</span>
-            <div>
+          <div class="flex flex-col initial-scale">
+            <span class="text-red-500"><img src="police.png" 
+             alt="Police Logo" class="w-8 h-8 sm:w-8 sm:h-8"></span>         
+              <div>
               <h2 class="font-semibold text-sm">Police Helpline Number</h2>
               <p class="text-xs text-gray-500">Police</p>
-            </div>
+            </div>         
           </div>
           <button class="text-gray-400 hover:text-red-500">🤍</button>
         </div>
         <div class="text-2xl font-bold mb-2">999</div>
         <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Police</div>
-        <div class="flex gap-2">
+        <div class="flex gap-2 space-x-8">
           <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
           <button onclick="makeCall('Police Helpline Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
         </div>
       </div>
-      <!-- Card Template -->
+      <!-- Card 3 -->
       <div class="bg-white rounded-lg shadow p-4">
         <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
-            <span class="text-red-500">🔒</span>
-            <div>
-              <h2 class="font-semibold text-sm">National Emergency Number</h2>
-              <p class="text-xs text-gray-500">National Emergency</p>
-            </div>
+          <div class="flex flex-col initial-scale">
+            <span class="text-red-500"><img src="fire-service.png" 
+             alt="Fire Service Logo" class="w-8 h-8 sm:w-8 sm:h-8"></span>         
+              <div>
+              <h2 class="font-semibold text-sm">Fire Service Number</h2>
+              <p class="text-xs text-gray-500">Fire Service</p>
+            </div>         
           </div>
           <button class="text-gray-400 hover:text-red-500">🤍</button>
         </div>
         <div class="text-2xl font-bold mb-2">999</div>
-        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
-        <div class="flex gap-2">
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Fire</div>
+        <div class="flex gap-2 space-x-8">
           <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
-          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+          <button onclick="makeCall('Fire Service Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
         </div>
       </div>
-<!-- Card Template -->
+<!-- Card 4 -->
       <div class="bg-white rounded-lg shadow p-4">
         <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
-            <span class="text-red-500">🔒</span>
-            <div>
-              <h2 class="font-semibold text-sm">National Emergency Number</h2>
-              <p class="text-xs text-gray-500">National Emergency</p>
-            </div>
+          <div class="flex flex-col initial-scale">
+            <span class="text-red-500"><img src="ambulance.png" 
+             alt="Ambulance Logo" class="w-8 h-8 sm:w-8 sm:h-8"></span>         
+              <div>
+              <h2 class="font-semibold text-sm">Ambulance Service</h2>
+              <p class="text-xs text-gray-500">Ambulance</p>
+            </div>         
           </div>
           <button class="text-gray-400 hover:text-red-500">🤍</button>
         </div>
-        <div class="text-2xl font-bold mb-2">999</div>
-        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
-        <div class="flex gap-2">
-          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
-          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        <div class="text-2xl font-bold mb-2">1994-999999</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Health</div>
+        <div class="flex gap-2 space-x-8">
+          <button onclick="copyNumber('1994-999999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('Ambulance Service', '91994-999999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
         </div>
       </div>
-<!-- Card Template -->
+<!-- Card 5-->
       <div class="bg-white rounded-lg shadow p-4">
         <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
-            <span class="text-red-500">🔒</span>
-            <div>
-              <h2 class="font-semibold text-sm">National Emergency Number</h2>
-              <p class="text-xs text-gray-500">National Emergency</p>
-            </div>
+          <div class="flex flex-col initial-scale">
+            <span class="text-red-500"><img src="emergency.png" 
+             alt="Help Logo" class="w-8 h-8 sm:w-8 sm:h-8"></span>         
+              <div>
+              <h2 class="font-semibold text-sm">Women & Child Helpline</h2>
+              <p class="text-xs text-gray-500">Women & Child Helpline</p>
+            </div>         
           </div>
           <button class="text-gray-400 hover:text-red-500">🤍</button>
         </div>
-        <div class="text-2xl font-bold mb-2">999</div>
-        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
-        <div class="flex gap-2">
-          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
-          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        <div class="text-2xl font-bold mb-2">109</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Help</div>
+        <div class="flex gap-2 space-x-8">
+          <button onclick="copyNumber('109')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('Women & Child Helpline', '109')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
         </div>
       </div>
-<!-- Card Template -->
+<!-- Card 6 -->
       <div class="bg-white rounded-lg shadow p-4">
         <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
-            <span class="text-red-500">🔒</span>
-            <div>
-              <h2 class="font-semibold text-sm">National Emergency Number</h2>
-              <p class="text-xs text-gray-500">National Emergency</p>
-            </div>
+          <div class="flex flex-col initial-scale">
+            <span class="text-red-500"><img src="emergency.png" 
+             alt="Anti Corruption Logo" class="w-8 h-8 sm:w-8 sm:h-8"></span>         
+              <div>
+              <h2 class="font-semibold text-sm">Anti-Corruption Helpline</h2>
+              <p class="text-xs text-gray-500">Anti-Corruption</p>
+            </div>         
           </div>
           <button class="text-gray-400 hover:text-red-500">🤍</button>
         </div>
-        <div class="text-2xl font-bold mb-2">999</div>
-        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
-        <div class="flex gap-2">
-          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
-          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        <div class="text-2xl font-bold mb-2">106</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Govt.</div>
+        <div class="flex gap-2 space-x-8">
+          <button onclick="copyNumber('106')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('Anti-Corruption Helpline', '106')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
         </div>
       </div>
-<!-- Card Template -->
+<!-- Card 7 -->
       <div class="bg-white rounded-lg shadow p-4">
         <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
-            <span class="text-red-500">🔒</span>
-            <div>
-              <h2 class="font-semibold text-sm">National Emergency Number</h2>
-              <p class="text-xs text-gray-500">National Emergency</p>
-            </div>
+          <div class="flex flex-col initial-scale">
+            <span class="text-red-500"><img src="emergency.png" 
+             alt="Electricity Logo" class="w-8 h-8 sm:w-8 sm:h-8"></span>         
+              <div>
+              <h2 class="font-semibold text-sm">Electricity Helpline</h2>
+              <p class="text-xs text-gray-500">Electricity Outage</p>
+            </div>         
           </div>
           <button class="text-gray-400 hover:text-red-500">🤍</button>
         </div>
-        <div class="text-2xl font-bold mb-2">999</div>
-        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
-        <div class="flex gap-2">
-          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
-          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        <div class="text-2xl font-bold mb-2">16216</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Electricity</div>
+        <div class="flex gap-2 space-x-8">
+          <button onclick="copyNumber('16216')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('Electricity Helpline', '16216')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
         </div>
       </div>
-<!-- Card Template -->
+<!-- Card 8 -->
       <div class="bg-white rounded-lg shadow p-4">
         <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
-            <span class="text-red-500">🔒</span>
-            <div>
-              <h2 class="font-semibold text-sm">National Emergency Number</h2>
-              <p class="text-xs text-gray-500">National Emergency</p>
-            </div>
+          <div class="flex flex-col initial-scale">
+            <span class="text-red-500"><img src="emergency.png" 
+             alt="Brac Logo" class="w-8 h-8 sm:w-8 sm:h-8"></span>         
+              <div>
+              <h2 class="font-semibold text-sm">Brac Helpline</h2>
+              <p class="text-xs text-gray-500">Brac</p>
+            </div>         
           </div>
           <button class="text-gray-400 hover:text-red-500">🤍</button>
         </div>
-        <div class="text-2xl font-bold mb-2">999</div>
-        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
-        <div class="flex gap-2">
-          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
-          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
-        </div>
-      </div>
-<!-- Card Template -->
-      <div class="bg-white rounded-lg shadow p-4">
-        <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
-            <span class="text-red-500">🔒</span>
-            <div>
-              <h2 class="font-semibold text-sm">National Emergency Number</h2>
-              <p class="text-xs text-gray-500">National Emergency</p>
-            </div>
-          </div>
-          <button class="text-gray-400 hover:text-red-500">🤍</button>
-        </div>
-        <div class="text-2xl font-bold mb-2">999</div>
-        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">All</div>
-        <div class="flex gap-2">
-          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
-          <button onclick="makeCall('National Emergency Number', '999')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        <div class="text-2xl font-bold mb-2">16445</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">NGO</div>
+        <div class="flex gap-2 space-x-8">
+          <button onclick="copyNumber('16445')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('Brac Helpline', '16445')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
         </div>
       </div>
 
-
-      <!-- You can add more cards like the above. To save time, you can clone the card div and change values. -->
-    </div>
+      <div class="bg-white rounded-lg shadow p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex flex-col initial-scale">
+            <span class="text-red-500"><img src="emergency.png" 
+             alt="Railway Logo" class="w-8 h-8 sm:w-8 sm:h-8"></span>         
+              <div>
+              <h2 class="font-semibold text-sm">Bangladesh Railway Helpline</h2>
+              <p class="text-xs text-gray-500">Bangladesh Railway</p>
+            </div>         
+          </div>
+          <button class="text-gray-400 hover:text-red-500">🤍</button>
+        </div>
+        <div class="text-2xl font-bold mb-2">163</div>
+        <div class="text-xs bg-gray-100 inline-block px-2 py-1 rounded mb-4">Travel</div>
+        <div class="flex gap-2 space-x-8">
+          <button onclick="copyNumber('999')" class="border px-4 py-1 rounded text-sm">📋 Copy</button>
+          <button onclick="makeCall('Bangladesh Railway Helpline', '163')" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded text-sm">📞 Call</button>
+        </div>
+      </div>
+      </div>
 
     <!-- Right: Call History -->
      
@@ -284,7 +278,7 @@
       </div>
       
         <!--<ul id="callHistory" class="space-y-2 text-sm text-gray-700 overflow-y-auto flex-1"></ul>-->
-    <ul id="callHistory" class="space-y-2 text-sm max-h-[h-8] overflow-y-auto text-gray-700"> 
+    <ul id="callHistory" class="space-y-2 text-sm min-h-screen overflow-y-auto text-gray-700"> 
         <!-- Call history entries appear here -->
       </ul>
     </div>
